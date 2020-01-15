@@ -1,4 +1,4 @@
-package org.example.repository.driver;
+package org.example.repository;
 
 import org.example.domain.driver.Driver;
 import org.springframework.data.jpa.repository.JpaRepository;
