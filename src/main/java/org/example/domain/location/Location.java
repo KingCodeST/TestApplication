@@ -91,6 +91,21 @@ public class Location {
             return this;
         }
 
+        public Builder copy(Location location)
+        {
+            this.locationId =location.locationId;
+            this.name=location.name;
+            this.latitude=location.latitude;
+            this.longitute=location.longitute;
+            this.locationType=location.locationType;
+            return this;
+        }
+
+        public Location build()
+        {
+            return new Location(this);
+        }
+
 
 
     }
