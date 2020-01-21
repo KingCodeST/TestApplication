@@ -4,4 +4,8 @@ import javax.persistence.*;
 
 @Entity
 public class Logout {
+
+    @Id
+    private String studentNo;
+
 }
