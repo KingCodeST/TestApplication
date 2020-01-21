@@ -1,7 +1,14 @@
 package org.example.service.institution;
 
+import org.example.domain.institution.Institution;
+import org.example.domain.user.User;
+import org.example.service.IService;
 import org.springframework.stereotype.Service;
 
-@Service
-public interface InstititutionTypeService {
+import java.util.List;
+
+public interface InstititutionTypeService extends IService<Institution,String> {
+    Institution retrieveByDesc(String institutionDesc);
+    List<Institution> getAll();
+
 }

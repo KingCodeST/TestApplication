@@ -1,7 +1,9 @@
 package org.example.service.login;
 
+import org.example.domain.login.LoginToken;
+import org.example.service.IService;
 import org.springframework.stereotype.Service;
 
-@Service
-public interface LoginTokenService {
+
+public interface LoginTokenService extends IService<LoginToken,String> {
 }

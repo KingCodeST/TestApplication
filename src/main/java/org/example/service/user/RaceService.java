@@ -1,7 +1,9 @@
 package org.example.service.user;
 
+import org.example.domain.user.Race;
+import org.example.service.IService;
 import org.springframework.stereotype.Service;
 
-@Service
-public interface RaceService {
+
+public interface RaceService extends IService<Race,String> {
 }
