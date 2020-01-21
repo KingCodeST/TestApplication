@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LocationTypeServiceImpl implements LocationTypeService {
+
+
     @Override
     public LocationType create(LocationType locationType) {
         return null;

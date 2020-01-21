@@ -41,7 +41,7 @@ public class DriverSecurity extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/developer").hasAnyRole("USER","ADMIN")
-                .antMatchers("/","testapplication").permitAll()
+                .antMatchers("/","/testapplication").permitAll()
                 .and().formLogin();
     }
 
