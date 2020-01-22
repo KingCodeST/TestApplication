@@ -12,7 +12,7 @@ public class Address {
 
     public Address(){}
 
-    public Address(Builder builder)
+    private Address(Builder builder)
     {
         this.addressId=builder.addressId;
         this.postal=builder.postal;

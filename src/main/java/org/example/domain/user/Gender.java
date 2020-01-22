@@ -36,7 +36,7 @@ public class Gender {
         private String studentNo;
         private String genderId;
         private String genderName;
-        
+
         public Builder setStudentNo(String studentNo)
         {
             this.studentNo =studentNo;
