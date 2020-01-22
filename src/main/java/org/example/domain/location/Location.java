@@ -43,16 +43,7 @@ public class Location {
         return latitude;
     }
 
-    @Override
-    public String toString() {
-        return "Location{" +
-                "locationId='" + locationId + '\'' +
-                ", name='" + name + '\'' +
-                ", locationType='" + locationType + '\'' +
-                ", longitute='" + longitute + '\'' +
-                ", latitude='" + latitude + '\'' +
-                '}';
-    }
+
 
     public static class Builder{
         private String locationId;

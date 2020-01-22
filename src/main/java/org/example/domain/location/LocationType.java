@@ -31,14 +31,7 @@ public class LocationType {
         return parentLocationtypeId;
     }
 
-    @Override
-    public String toString() {
-        return "LocationType{" +
-                "locationTypeId='" + locationTypeId + '\'' +
-                ", name='" + name + '\'' +
-                ", parentLocationtypeId='" + parentLocationtypeId + '\'' +
-                '}';
-    }
+
 
     public static class Builder{
         private String locationTypeId;

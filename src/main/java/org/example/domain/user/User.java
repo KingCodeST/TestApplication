@@ -44,16 +44,7 @@ public class User {
         return locationId;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "studentNo='" + studentNo + '\'' +
-                ", addressId='" + addressId + '\'' +
-                ", contactId='" + contactId + '\'' +
-                ", cellNumber='" + cellNumber + '\'' +
-                ", locationId='" + locationId + '\'' +
-                '}';
-    }
+
 
     public static class Builder{
         private String studentNo;

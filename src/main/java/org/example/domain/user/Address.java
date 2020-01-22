@@ -31,14 +31,7 @@ public class Address {
         return currentAddress;
     }
 
-    @Override
-    public String toString() {
-        return "Address{" +
-                "addressId='" + addressId + '\'' +
-                ", postal='" + postal + '\'' +
-                ", currentAddress='" + currentAddress + '\'' +
-                '}';
-    }
+
 
     public static class Builder{
 
