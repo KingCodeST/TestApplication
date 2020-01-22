@@ -16,13 +16,22 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    private UserServiceImpl()
+    private UserServiceImpl() {}
+
+    public static UserService getUserService()
     {
-        
+        if(userService ==null) userService=new UserServiceImpl();
+        return userService;
     }
+
 
     @Override
     public User retrieveByDesc(String userDesc) {
+        List<User> users =getAll();
+        for(User userRepository: users)
+        {
+        //    if(userRepository.)
+        }
         return null;
     }
 

@@ -8,6 +8,8 @@ public class User {
 
     @Id
     private String studentNo;
+    private String fname;
+    private String lname;
     private String addressId;
     private String contactId;
     private String cellNumber;
@@ -18,10 +20,20 @@ public class User {
     public User(Builder builder)
     {
         this.studentNo =builder.studentNo;
+        this.fname =builder.fname;
+        this.lname =builder.lname;
         this.addressId =builder.addressId;
         this.locationId=builder.locationId;
         this.contactId=builder.contactId;
         this.cellNumber=builder.cellNumber;
+    }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public String getLname() {
+        return lname;
     }
 
     public String getStudentNo() {
@@ -44,7 +56,18 @@ public class User {
         return locationId;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "studentNo='" + studentNo + '\'' +
+                ", fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", addressId='" + addressId + '\'' +
+                ", contactId='" + contactId + '\'' +
+                ", cellNumber='" + cellNumber + '\'' +
+                ", locationId='" + locationId + '\'' +
+                '}';
+    }
 
     public static class Builder{
         private String studentNo;
@@ -52,11 +75,27 @@ public class User {
         private String contactId;
         private String cellNumber;
         private String locationId;
+        private String fname;
+        private String lname;
 
         public Builder setStudentNo(String studentNo){
             this.studentNo=studentNo;
             return this;
         }
+
+        public Builder setFname(String fname)
+        {
+            this.fname =fname;
+            return this;
+        }
+
+        public Builder setLname(String lname)
+        {
+            this.lname =lname;
+            return this;
+        }
+
+
         private Builder setAddressId(String addressId)
         {
             this.addressId =addressId;
@@ -88,6 +127,8 @@ public class User {
             this.cellNumber=user.cellNumber;
             this.contactId=user.contactId;
             this.addressId=user.addressId;
+            this.fname =user.fname;
+            this.lname =user.lname;
             return this;
         }
 
