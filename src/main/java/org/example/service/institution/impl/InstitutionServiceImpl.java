@@ -1,6 +1,6 @@
 package org.example.service.institution.impl;
 
-import org.example.domain.institution.InstitutionType;
+import org.example.domain.institution.Institution;
 import org.example.service.institution.InstitutionService;
 import org.springframework.stereotype.Service;
 
@@ -10,27 +10,27 @@ import java.util.List;
 public class InstitutionServiceImpl implements InstitutionService {
 
     @Override
-    public InstitutionType retrieveByDesc(String institutionTyprDesc) {
+    public Institution retrieveByDesc(String institutionDesc) {
         return null;
     }
 
     @Override
-    public List<InstitutionType> getAll() {
+    public List<Institution> getAll() {
         return null;
     }
 
     @Override
-    public InstitutionType create(InstitutionType institutionType) {
+    public Institution create(Institution Institution) {
         return null;
     }
 
     @Override
-    public InstitutionType read(String s) {
+    public Institution read(String s) {
         return null;
     }
 
     @Override
-    public InstitutionType update(InstitutionType institutionType) {
+    public Institution update(Institution Institution) {
         return null;
     }
 
