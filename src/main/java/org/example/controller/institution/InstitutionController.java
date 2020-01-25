@@ -37,7 +37,7 @@ public class InstitutionController {
             saveInstitution = InstitutionFactory.GenericBuilder(institutionId,institutions,institutionType,parentInstitution);
             saveInstitution =institutionService.create(saveInstitution);
         }
-        
+
         return ResponseEntity.ok(this);
     }
 

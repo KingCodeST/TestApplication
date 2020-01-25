@@ -4,9 +4,14 @@ import org.example.domain.institution.Institution;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;
 
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
 public class InstitutionFactoryTest {
 
   private  Institution city,care;
@@ -31,10 +36,7 @@ public class InstitutionFactoryTest {
     }
 
     @Test
-    public void genericBuilder() {
-//        Institution copy=new Institution(institutionId,institutionName,institutionType,parentInstitutionTypeId);
-//        Institution copye=new Institution.Builder(institutionId,institutionName,institutionType,parentInstitutionTypeId);
-        Institution care= InstitutionFactory.GenericBuilder(institutionId,institutionName,institutionType,parentInstitutionTypeId);
+    public void genericBuilder() {Institution care= InstitutionFactory.GenericBuilder(institutionId,institutionName,institutionType,parentInstitutionTypeId);
         Assert.assertNotNull(care);
         System.out.print(care);
     }
