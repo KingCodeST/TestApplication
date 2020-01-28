@@ -18,21 +18,22 @@ public class LocationTypeServiceImpl implements LocationTypeService {
 
     @Override
     public LocationType create(LocationType locationType) {
-        return null;
+
+        return locationTypeRepository.save(locationType);
     }
 
     @Override
     public LocationType read(String s) {
-        return null;
+        return locationTypeRepository.getOne(s);
     }
 
     @Override
     public LocationType update(LocationType locationType) {
-        return null;
+        return locationTypeRepository.save(locationType);
     }
 
     @Override
     public void delete(String s) {
-
+        locationTypeRepository.deleteById(s);
     }
 }
