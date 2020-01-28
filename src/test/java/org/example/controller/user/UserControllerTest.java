@@ -38,22 +38,22 @@ public class UserControllerTest {
 
     @Test
     public void create() {
-        User user= UserFactory.GenericBuilder("30096122","Siphokuhle","Tyasi","0794521278","#3251TG","#TH6852");
+      //      User user= UserFactory.GenericBuilder("30096122","Siphokuhle","Tyasi","0794521278","#3251TG","#TH6852");
 //
 
-    ResponseEntity result =restTemplate.withBasicAuth("admin","password")
-                    .postForEntity(BASE_URL +"/create/{studNo}{fname}{lname}{cellNo}{cantactId}{locationId}",null,String.class);
+//    ResponseEntity result =restTemplate.withBasicAuth("admin","password")
+//                    .postForEntity(BASE_URL +"/create/",null,String.class);
+//
+//    System.out.println("this is what you printing "+result.getStatusCode());
+//    assertEquals(HttpStatus.OK,result.getStatusCode());
 
-    System.out.println("this is what you printing "+result.getStatusCode());
-    assertEquals(HttpStatus.OK,result.getStatusCode());
 
-
-//        User user= UserFactory.GenericBuilder("30096122","Siphokuhle","Tyasi","0794521278","#3251TG","#TH6852");
-//        System.out.print(user+"/");
-//        ResponseEntity<User>  postResponse =restTemplate.postForEntity(baseURL +"/create",user,User.class);
-//        System.out.println(postResponse);
-//        assertNotNull(postResponse);
-//        assertNotNull(postResponse.getBody());
+        User user= UserFactory.GenericBuilder("215048243","cj","Goat","0794521278","#3251TG","#TH6852");
+        System.out.print(user+"/");
+        ResponseEntity<User>  postResponse =restTemplate.postForEntity(BASE_URL +"/create/user",user,User.class);
+        System.out.println(postResponse);
+        assertNotNull(postResponse);
+        assertNotNull(postResponse.getBody());
     }
 
     @Ignore
@@ -77,13 +77,14 @@ public class UserControllerTest {
     }
 
 
-    @Ignore
+    @Test
     public void testgetAlluser() {
-     //   HttpHeaders headers = new HttpHeaders();
+       HttpHeaders headers = new HttpHeaders();
 
-//        HttpEntity<String> entity =new HttpEntity<String>(null,headers);
-//        ResponseEntity<String> reponse =restTemplate.exchange(baseURL +"/read/all",
-//                HttpMethod.GET,entity,String.class);
-//        assertNotNull(reponse.getBody());
+        HttpEntity<String> entity =new HttpEntity<String>(null,headers);
+        ResponseEntity<String> reponse =restTemplate.exchange(BASE_URL +"/read/all",
+                HttpMethod.GET,entity,String.class);
+        System.out.println(reponse);
+        assertNotNull(reponse.getBody());
     }
 }

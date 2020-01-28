@@ -1,6 +1,6 @@
 package org.example.factory.location;
 
-import org.example.domain.driver.Driver;
+
 import org.example.domain.location.Location;
 
 public class LocationFactory {
