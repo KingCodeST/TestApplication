@@ -23,6 +23,9 @@ public class DriverRepositoryTest {
     @Autowired
     private DriverRepository repository;
     private String driverId =null;
+    private String fname ="Lulama";
+
+
 
     @Test
     public void DriverCreateTest() throws IOException{
@@ -33,12 +36,13 @@ public class DriverRepositoryTest {
         Assert.assertNotNull(driver);
     }
 
-//    @Test
-//    public void SiteDriver() throws IOException{
-//        Driver driver=repository.findAll(driverId);
-//        System.out.println(driver);
-//        Assert.assertNotNull(driver);
-//    }
+
+    @Test
+    public void SiteDriver() throws IOException{
+        Driver driver=repository.findByFname("Lulama");
+        System.out.println(driver);
+        Assert.assertNotNull(driver);
+    }
 
 
 }
