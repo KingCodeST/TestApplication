@@ -11,7 +11,7 @@ public class ArriveServiceImpl implements ArriveService {
 
     @Autowired
     private ArriveRepository repository;
-    private ArriveService service;
+    private ArriveService service=null;
 
     private ArriveServiceImpl(){}
 

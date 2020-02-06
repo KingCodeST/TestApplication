@@ -14,7 +14,7 @@ public class DocumentTypeServiceImpl implements DocumentTypeService {
     private static DocumentTypeService service=null;
 
     private DocumentTypeServiceImpl(){}
-    
+
     public static DocumentTypeService getDocumentTypeService()
     {
         if(service ==null) service =new DocumentTypeServiceImpl();

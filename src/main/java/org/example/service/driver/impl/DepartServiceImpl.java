@@ -11,7 +11,7 @@ public class DepartServiceImpl implements DepartService {
 
     @Autowired
     private DepartRepository repository;
-    private DepartService report;
+    private DepartService service = null;
 
     private DepartServiceImpl(){}
 

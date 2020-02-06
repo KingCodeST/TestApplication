@@ -11,7 +11,7 @@ public class DocumentationServiceImpl implements DocumentationService {
 
     @Autowired
     private DocumentationRepository repository;
-    private DocumentationService service;
+    private DocumentationService service=null;
 
     private DocumentationServiceImpl(){}
 
