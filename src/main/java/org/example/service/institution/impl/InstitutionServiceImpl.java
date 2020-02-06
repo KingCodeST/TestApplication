@@ -12,10 +12,15 @@ import java.util.List;
 public class InstitutionServiceImpl implements InstitutionService {
 
     @Autowired
-    private InstitutionService service;
+    private static InstitutionService service;
     private InstitutionRepository repository;
 
-    
+    private InstitutionServiceImpl(){}
+
+    public static InstitutionService getInstitutionService(){
+        if(service ==null) service=new InstitutionServiceImpl();
+        return service;
+    }
 
 
     @Override
