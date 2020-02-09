@@ -6,18 +6,26 @@ import org.example.service.driver.DocumentationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DocumentationServiceImpl implements DocumentationService {
 
     @Autowired
     private DocumentationRepository repository;
-    private DocumentationService service=null;
+    private static DocumentationService service=null;
 
     private DocumentationServiceImpl(){}
 
+    public static DocumentationService getDocumentationService()
+    {
+        if(service ==null)service=new DocumentationServiceImpl();
+        return service;
+    }
+
     @Override
     public Documentation create(Documentation documentation) {
-        return null;
+        return this.repository.save(documentation);
     }
 
     @Override
@@ -27,11 +35,21 @@ public class DocumentationServiceImpl implements DocumentationService {
 
     @Override
     public Documentation update(Documentation documentation) {
-        return null;
+        return this.repository.save(documentation);
     }
 
     @Override
     public void delete(String s) {
+        this.repository.deleteById(s);
+    }
 
+    @Override
+    public Documentation retrieveByDesc(String driverDesc) {
+        return null;
+    }
+
+    @Override
+    public List<Documentation> getAll() {
+        return this.repository.findAll();
     }
 }

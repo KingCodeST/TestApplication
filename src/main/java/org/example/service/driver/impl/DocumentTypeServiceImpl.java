@@ -6,6 +6,8 @@ import org.example.service.driver.DocumentTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DocumentTypeServiceImpl implements DocumentTypeService {
 
@@ -24,7 +26,7 @@ public class DocumentTypeServiceImpl implements DocumentTypeService {
 
     @Override
     public DocumentType create(DocumentType documentType) {
-        return null;
+        return this.repository.save(documentType);
     }
 
     @Override
@@ -34,11 +36,22 @@ public class DocumentTypeServiceImpl implements DocumentTypeService {
 
     @Override
     public DocumentType update(DocumentType documentType) {
-        return null;
+        return this.repository.save(documentType);
+
     }
 
     @Override
     public void delete(String s) {
+        this.repository.deleteById(s);
+    }
 
+    @Override
+    public DocumentType retrieveByDesc(String driverDesc) {
+        return null;
+    }
+
+    @Override
+    public List<DocumentType> getAll() {
+        return this.repository.findAll();
     }
 }

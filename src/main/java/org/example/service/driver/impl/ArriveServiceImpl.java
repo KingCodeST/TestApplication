@@ -6,18 +6,27 @@ import org.example.service.driver.ArriveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ArriveServiceImpl implements ArriveService {
 
     @Autowired
     private ArriveRepository repository;
-    private ArriveService service=null;
+    private static ArriveService service=null;
 
     private ArriveServiceImpl(){}
 
+    public static ArriveService getArriveService()
+    {
+        if(service ==null) service=new ArriveServiceImpl();
+        return service;
+    }
+
     @Override
     public Arrive create(Arrive arrive) {
-        return null;
+        return this.repository.save(arrive);
+
     }
 
     @Override
@@ -27,11 +36,24 @@ public class ArriveServiceImpl implements ArriveService {
 
     @Override
     public Arrive update(Arrive arrive) {
-        return null;
+
+        return this.repository.save(arrive);
+
     }
 
     @Override
     public void delete(String s) {
+        this.repository.deleteById(s);
 
+    }
+
+    @Override
+    public Arrive retrieveByDesc(String driverDesc) {
+        return null;
+    }
+
+    @Override
+    public List<Arrive> getAll() {
+        return this.repository.findAll();
     }
 }

@@ -6,6 +6,7 @@ import org.example.service.user.TitleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -45,4 +46,13 @@ public class TitleServiceImpl implements TitleService {
         this.titleRepository.deleteById(s);
     }
 
+    @Override
+    public Title retrieveByDesc(String driverDesc) {
+        return null;
+    }
+
+    @Override
+    public List<Title> getAll() {
+        return this.titleRepository.findAll();
+    }
 }

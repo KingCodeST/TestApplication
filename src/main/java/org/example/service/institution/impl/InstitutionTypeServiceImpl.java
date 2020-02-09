@@ -26,32 +26,25 @@ public class InstitutionTypeServiceImpl implements InstititutionTypeService {
 
 
     @Override
-    public Institution retrieveByDesc(String institutionDesc) {
+    public InstitutionType create(InstitutionType institutiontype) {
+
+               return this.repository.save(institutiontype);
+
+    }
+
+    @Override
+    public InstitutionType read(String s) {
         return null;
     }
 
     @Override
-    public List<Institution> getAll() {
-        return null;
-    }
-
-    @Override
-    public Institution create(Institution institution) {
-        return null;
-    }
-
-    @Override
-    public Institution read(String s) {
-        return null;
-    }
-
-    @Override
-    public Institution update(Institution institution) {
-        return null;
+    public InstitutionType update(InstitutionType institution) {
+        return this.repository.save(institution);
     }
 
     @Override
     public void delete(String s) {
+        this.repository.deleteById(s);
 
     }
 }

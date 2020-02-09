@@ -6,6 +6,7 @@ import org.example.service.user.GenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -38,5 +39,15 @@ public class GenderServiceImpl implements GenderService {
     @Override
     public void delete(String s) {
         this.genderRepository.deleteById(s);
+    }
+
+    @Override
+    public Gender retrieveByDesc(String driverDesc) {
+        return null;
+    }
+
+    @Override
+    public List<Gender> getAll() {
+        return this.genderRepository.findAll();
     }
 }
