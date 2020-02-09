@@ -34,8 +34,8 @@ public class InstitutionServiceImpl implements InstitutionService {
     }
 
     @Override
-    public Institution create(Institution Institution) {
-        return null;
+    public Institution create(Institution institution) {
+        return this.repository.save(institution);
     }
 
     @Override
@@ -44,12 +44,12 @@ public class InstitutionServiceImpl implements InstitutionService {
     }
 
     @Override
-    public Institution update(Institution Institution) {
-        return null;
+    public Institution update(Institution institution) {
+        return this.repository.save(institution);
     }
 
     @Override
     public void delete(String s) {
-
+        this.repository.deleteById(s);
     }
 }

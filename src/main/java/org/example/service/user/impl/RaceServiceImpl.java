@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.swing.text.html.Option;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -47,4 +48,13 @@ public class RaceServiceImpl implements RaceService {
         this.raceRepository.deleteById(s);
     }
 
+    @Override
+    public Race retrieveByDesc(String driverDesc) {
+        return null;
+    }
+
+    @Override
+    public List<Race> getAll() {
+        return this.raceRepository.findAll();
+    }
 }
