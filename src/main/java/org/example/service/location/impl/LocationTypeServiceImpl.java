@@ -16,6 +16,11 @@ public class LocationTypeServiceImpl implements LocationTypeService {
 
     }
 
+    public static LocationTypeService getLocationTypeService(){
+        if(locationTypeService ==null)locationTypeService=new LocationTypeServiceImpl();
+                return locationTypeService;
+    }
+
     @Override
     public LocationType create(LocationType locationType) {
 

@@ -36,6 +36,10 @@ public class RaceServiceImpl implements RaceService {
 
     @Override
     public Race update(Race race) {
+        if(race ==race) {
+            race =this.raceRepository.save(race);
+        }
+
         return this.raceRepository.save(race);
     }
 
