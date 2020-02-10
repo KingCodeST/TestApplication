@@ -54,6 +54,17 @@ public class LocationServiceImplTest {
 
     @Test
     public void update() {
+       // Location update =repository.findById("3ds");
+      //  System.out.println("this has been, updated = "+update);
+
+
+
+//        Employee employee = em.find(Employee.class, 1);
+//
+//        em.getTransaction().begin();
+//        employee.setNickname("Joe the Plumber");
+//        em.getTransaction().commit();
+
     }
 
     @Test
