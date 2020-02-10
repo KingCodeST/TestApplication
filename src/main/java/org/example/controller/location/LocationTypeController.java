@@ -3,9 +3,10 @@ package org.example.controller.location;
 import org.example.domain.location.LocationType;
 import org.example.service.location.LocationTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping("/locationtype")
 public class LocationTypeController {
 

@@ -58,6 +58,8 @@ public class DriverServiceImplTest {
 
     @Test
     public void update() {
+        Driver create =this.service.update(this.driver);
+
     }
 
     @Test

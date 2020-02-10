@@ -4,12 +4,13 @@ import org.example.domain.location.Location;
 import org.example.factory.location.LocationFactory;
 import org.example.service.location.impl.LocationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Set;
 
-@RestController
+@Controller
 @RequestMapping("/testapplication/location")
 public class LocationController {
 
