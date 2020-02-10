@@ -22,7 +22,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 public class UserControllerTest {
 
-    private static final String BASE_URL="http://localhost:8080/testapplication/lookup/user";
+    private static final String BASE_URL="http://localhost:8080/testapplication/user";
 
   //  User user= UserFactory.GenericBuilder("30096122","Siphokuhle","Tyasi","0794521278","#3251TG","#TH6852");
     private String studNo ="30096122";
@@ -50,7 +50,7 @@ public class UserControllerTest {
 
         User user= UserFactory.GenericBuilder("215048243","cj","Goat","0794521278","#3251TG","#TH6852");
         System.out.print(user+"/");
-        ResponseEntity<User>  postResponse =restTemplate.postForEntity(BASE_URL +"/create/user",user,User.class);
+        ResponseEntity<User>  postResponse =restTemplate.postForEntity(BASE_URL +"/create",user,User.class);
         System.out.println(postResponse);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

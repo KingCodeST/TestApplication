@@ -3,23 +3,23 @@ package org.example.service.institution.impl;
 import org.example.domain.institution.Institution;
 import org.example.domain.institution.InstitutionType;
 import org.example.repository.institution.InstitutionTypeRepository;
-import org.example.service.institution.InstititutionTypeService;
+import org.example.service.institution.InstitutionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class InstitutionTypeServiceImpl implements InstititutionTypeService {
+public class InstitutionTypeServiceImpl implements InstitutionTypeService {
 
     @Autowired
     private InstitutionTypeRepository repository;
-    private static InstititutionTypeService service;
+    private static InstitutionTypeService service;
 
 
     private InstitutionTypeServiceImpl(){}
 
-    public static InstititutionTypeService getInstitutionService(){
+    public static InstitutionTypeService getInstitutionService(){
         if(service ==null) service=new InstitutionTypeServiceImpl();
         return service;
     }
@@ -46,5 +46,15 @@ public class InstitutionTypeServiceImpl implements InstititutionTypeService {
     public void delete(String s) {
         this.repository.deleteById(s);
 
+    }
+
+    @Override
+    public Institution retrieveByDesc(String institutionDesc) {
+        return null;
+    }
+
+    @Override
+    public List<Institution> getAll() {
+        return null;
     }
 }

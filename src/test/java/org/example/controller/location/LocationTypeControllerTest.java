@@ -18,7 +18,7 @@ public class LocationTypeControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private static final String BASE_URL="http://localhost:8080/testapplication/lookup/locationtype";
+    private static final String BASE_URL="http://localhost:8080/testapplication/locationtype";
 
 
     @Test
