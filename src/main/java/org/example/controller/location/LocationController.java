@@ -20,7 +20,7 @@ public class LocationController {
     @GetMapping("/create/{locationNum,LocationName,latitude,longitude,locationTypeId}")
     public @ResponseBody
     Location create(@PathVariable String LocationName,String locationNum,String latitude,String longitude,String locationTypeId ){
-        Location location= LocationFactory.builderDriver(locationNum,LocationName,latitude,longitude,locationTypeId);
+        Location location= LocationFactory.builderDriver(LocationName,latitude,longitude,locationTypeId);
         return service.create(location);
     }
 

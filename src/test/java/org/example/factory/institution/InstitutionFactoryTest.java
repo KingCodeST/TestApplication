@@ -36,7 +36,7 @@ public class InstitutionFactoryTest {
     }
 
     @Test
-    public void genericBuilder() {Institution care= InstitutionFactory.GenericBuilder(institutionId,institutionName,institutionType,parentInstitutionTypeId);
+    public void genericBuilder() {Institution care= InstitutionFactory.GenericBuilder(institutionName,institutionType,parentInstitutionTypeId);
         Assert.assertNotNull(care);
         System.out.print(care);
     }

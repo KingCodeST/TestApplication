@@ -23,7 +23,7 @@ public class LocationTypeControllerTest {
 
     @Test
     public void create() {
-        LocationType locationType= LocationTypeFactory.builderDriver("#2019","Residence","Cape Town");
+        LocationType locationType= LocationTypeFactory.builderDriver("Residence","Cape Town");
 
         ResponseEntity<LocationType> postResponse =restTemplate.postForEntity(BASE_URL+"/create",locationType,LocationType.class);
         System.out.println(postResponse);
