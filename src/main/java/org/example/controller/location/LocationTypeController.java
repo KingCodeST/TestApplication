@@ -1,10 +1,13 @@
 package org.example.controller.location;
 
 import org.example.domain.location.LocationType;
+import org.example.domain.user.User;
 import org.example.service.location.LocationTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/locationtype")
@@ -32,6 +35,13 @@ public class LocationTypeController {
     public LocationType read(@PathVariable String id)
     {
         return service.read(id);
+    }
+
+    @GetMapping("/read/all")
+    @ResponseBody
+    public List<LocationType> getAll()
+    {
+        return service.getAll();
     }
 
 //    @GetMapping("/delete/{id}")

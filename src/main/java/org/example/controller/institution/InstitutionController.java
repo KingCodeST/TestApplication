@@ -1,6 +1,7 @@
 package org.example.controller.institution;
 
 import org.example.domain.institution.Institution;
+import org.example.domain.user.User;
 import org.example.factory.institution.InstitutionFactory;
 import org.example.service.institution.InstitutionService;
 import org.example.service.institution.impl.InstitutionServiceImpl;
@@ -8,10 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/testapplication/institution")
@@ -21,7 +21,7 @@ public class InstitutionController {
     InstitutionServiceImpl institutionService;
 
     @PostMapping(value ="/create/{institution}", produces= MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity createInstitution(@PathVariable String institutions,String institutionId,String institutionType,String parentInstitution){
+    public ResponseEntity createInstitution(@PathVariable String institutions,String institutionType,String parentInstitution){
         System.out.println("Enter Value: "+institutions);
 
         Institution saveInstitution =null;
@@ -40,6 +40,13 @@ public class InstitutionController {
         }
 
         return ResponseEntity.ok(this);
+    }
+
+    @GetMapping("/read/all")
+    @ResponseBody
+    public List<Institution> getAll()
+    {
+        return institutionService.getAll();
     }
 
 }
