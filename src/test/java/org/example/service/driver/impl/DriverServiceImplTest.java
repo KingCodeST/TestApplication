@@ -25,7 +25,7 @@ public class DriverServiceImplTest {
     private String driverId;
   //  Driver driver;
 
-    Driver driver =DriverFactory.builderDriver("$3234",254,57,"Kuhle","Tyasi");
+    Driver driver =DriverFactory.builderDriver(09.90,87,"jk","Kuhle");
 
 
     private Driver getSaved()

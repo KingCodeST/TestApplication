@@ -1,13 +1,14 @@
 package org.example.factory.user;
 
 import org.example.domain.user.User;
+import org.example.util.GenerateID;
 
 public class UserFactory {
 
-    public static User GenericBuilder(String studNo,String fname,String lname,String cellNo,String cantactId,String locationId)
+    public static User GenericBuilder(String fname,String lname,String cellNo,String cantactId,String locationId)
     {
         return new User.Builder()
-                        .setStudentNo(studNo)
+                        .setStudentNo(GenerateID.generateId())
                         .setFname(fname)
                         .setLname(lname)
                         .setCellNumber(cellNo)

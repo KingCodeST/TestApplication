@@ -29,7 +29,7 @@ public class DriverRepositoryTest {
 
     @Test
     public void DriverCreateTest() throws IOException{
-        Driver driver= DriverFactory.builderDriver("21#54#36",7040.78,21,"Lulama","Mazala");
+        Driver driver= DriverFactory.builderDriver(65988.87,7040,"ilo","Lulama");
         Driver result =repository.save(driver);
         driverId =result.getDriverId();
         System.out.println(driverId);
