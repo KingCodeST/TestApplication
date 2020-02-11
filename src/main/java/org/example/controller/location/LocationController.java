@@ -17,14 +17,14 @@ public class LocationController {
     @Autowired
     private LocationServiceImpl service;
 
-    @GetMapping("/create/{locationNum,LocationName,latitude,longitude,locationTypeId}")
+    @GetMapping("/create/{LocationName,latitude,longitude,locationTypeId}")
     public @ResponseBody
-    Location create(@PathVariable String LocationName,String locationNum,String latitude,String longitude,String locationTypeId ){
+    Location create(@PathVariable String LocationName,String latitude,String longitude,String locationTypeId ){
         Location location= LocationFactory.builderDriver(LocationName,latitude,longitude,locationTypeId);
         return service.create(location);
     }
 
-    @GetMapping("/getall")
+    @GetMapping("/read/all")
     @ResponseBody
     public List<Location> getAll(){
         return service.getAll();
