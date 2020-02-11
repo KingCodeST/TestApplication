@@ -11,8 +11,9 @@ import java.util.List;
 @Service
 public class InstitutionServiceImpl implements InstitutionService {
 
+    private static InstitutionService service ;
+
     @Autowired
-    private static InstitutionService service;
     private InstitutionRepository repository;
 
     private InstitutionServiceImpl(){}
