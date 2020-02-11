@@ -14,7 +14,6 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    @Qualifier("serviceImpl")
     private UserService service;
 
     @PostMapping("/create")

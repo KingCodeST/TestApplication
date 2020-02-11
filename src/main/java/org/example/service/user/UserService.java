@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface UserService extends IService<User,String> {
     User retrieveByDesc(String UserDesc);
     List<User> getAll();

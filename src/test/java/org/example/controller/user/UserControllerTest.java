@@ -22,10 +22,10 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 public class UserControllerTest {
 
-    private static final String BASE_URL="http://localhost:8080/testapplication/user";
+    private static final String BASE_URL="http://localhost:8080/user";
 
   //  User user= UserFactory.GenericBuilder("30096122","Siphokuhle","Tyasi","0794521278","#3251TG","#TH6852");
-    private String studNo ="30096122";
+    private String studNo ="4783";
     private String fname ="Siphokuhle";
     private String lname ="Tyasi";
     private String cellNo ="0794521278";
@@ -71,7 +71,7 @@ public class UserControllerTest {
     @Test
     public void getAll(){
         ResponseEntity<String> result =restTemplate.withBasicAuth("student","password")
-                                .getForEntity(BASE_URL+"/all",String.class);
+                                .getForEntity(BASE_URL+"/read/all",String.class);
         System.out.println(result.getBody());
         assertEquals(HttpStatus.OK,result.getStatusCode());
     }

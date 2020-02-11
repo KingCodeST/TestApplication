@@ -26,7 +26,7 @@ public class LocationServiceImplTest {
     private  LocationService service;
     private LocationRepository repository;
 
-    Location location= LocationFactory.builderDriver("#T454","Catsville Residence","18.4590","-33.9382","");
+    Location location= LocationFactory.builderDriver("#SPT345","South point Residence","18.4590","-33.9382","");
 
     @Test
     public void getLocationService() {

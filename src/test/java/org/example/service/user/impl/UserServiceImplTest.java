@@ -20,12 +20,13 @@ import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.JVM)
 public class UserServiceImplTest {
 
-    private UserService service;
+
 
     @Autowired
+    private UserService service;
     private UserRepository repository;
 
-    static User user= UserFactory.GenericBuilder("215038142","siphokuhle","tyasi","078452378","45","");
+    static User user= UserFactory.GenericBuilder("30096122","michael","bhula","078452378","45","");
 
 
 
