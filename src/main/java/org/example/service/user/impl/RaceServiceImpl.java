@@ -31,10 +31,9 @@ public class RaceServiceImpl implements RaceService {
 
     @Override
     public Race read(String s) {
-        Optional<Race> optionalRace=this.raceRepository.findById(s);
+        Optional<Race> optionalRace = this.raceRepository.findById(s);
         return optionalRace.orElse(null);
     }
-
     @Override
     public Race update(Race race) {
         if(race ==race) {

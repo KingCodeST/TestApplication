@@ -17,7 +17,7 @@ public class Location {
     private Location(Builder builder)
     {
         this.locationId=builder.locationId;
-        this.name=this.name;
+        this.name=builder.name;
         this.locationType=builder.locationType;
         this.longitute=builder.longitute;
         this.latitude=builder.latitude;

@@ -23,7 +23,7 @@ public class DriverControllerTest {
 
     @Test
     public void create() {
-        Driver driver= DriverFactory.builderDriver("&7960",675,50,"Athenkosi","Sethi");
+        Driver driver= DriverFactory.builderDriver(77345.45,675,"Jon","Athenkosi");
 
         ResponseEntity<Driver> postResponse =restTemplate.postForEntity(baseURL +"/create",driver,Driver.class);
         System.out.println("The out come "+postResponse+"/n");

@@ -35,7 +35,7 @@ public class InstitutionController {
         {
             System.out.println("institution already exists");
         }else{
-            saveInstitution = InstitutionFactory.GenericBuilder(institutionId,institutions,institutionType,parentInstitution);
+            saveInstitution = InstitutionFactory.GenericBuilder(institutions,institutionType,parentInstitution);
             saveInstitution =institutionService.create(saveInstitution);
         }
 

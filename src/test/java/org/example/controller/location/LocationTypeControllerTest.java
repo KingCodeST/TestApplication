@@ -18,12 +18,12 @@ public class LocationTypeControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private static final String BASE_URL="http://localhost:8080/testapplication/lookup/locationtype";
+    private static final String BASE_URL="http://localhost:8080/testapplication/locationtype";
 
 
     @Test
     public void create() {
-        LocationType locationType= LocationTypeFactory.builderDriver("#2019","Residence","Cape Town");
+        LocationType locationType= LocationTypeFactory.builderDriver("Residence","Cape Town");
 
         ResponseEntity<LocationType> postResponse =restTemplate.postForEntity(BASE_URL+"/create",locationType,LocationType.class);
         System.out.println(postResponse);
