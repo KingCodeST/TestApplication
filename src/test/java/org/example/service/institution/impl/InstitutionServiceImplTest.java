@@ -49,7 +49,7 @@ public class InstitutionServiceImplTest {
 
     @Test
     public void create() {
-        Institution create=service.create(institution);
+        Institution create=this.service.create(this.institution);
         System.out.println("institution was created, create = "+create);
         Assert.assertNotNull(create);
         System.out.println(this.institution);
