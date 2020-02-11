@@ -1,9 +1,12 @@
 package org.example.service.location.impl;
 
+import org.example.domain.location.Location;
 import org.example.domain.location.LocationType;
 import org.example.repository.location.LocationTypeRepository;
 import org.example.service.location.LocationTypeService;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class LocationTypeServiceImpl implements LocationTypeService {
@@ -40,5 +43,15 @@ public class LocationTypeServiceImpl implements LocationTypeService {
     @Override
     public void delete(String s) {
         locationTypeRepository.deleteById(s);
+    }
+
+    @Override
+    public LocationType retrieveByDesc(String locationTypeDesc) {
+        return null;
+    }
+
+    @Override
+    public List<LocationType> getAll() {
+        return locationTypeRepository.findAll();
     }
 }
