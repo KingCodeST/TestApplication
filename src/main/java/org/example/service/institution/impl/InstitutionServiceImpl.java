@@ -30,7 +30,7 @@ public class InstitutionServiceImpl implements InstitutionService {
 
     @Override
     public List<Institution> getAll() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
