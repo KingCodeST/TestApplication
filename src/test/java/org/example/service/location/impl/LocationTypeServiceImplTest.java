@@ -37,7 +37,7 @@ public class LocationTypeServiceImplTest {
     @Test
     public void create() {
         LocationType create=this.service.create(this.locationType);
-        System.out.println("locationtype was created = "+create);
+        System.out.println("locationtype is created = "+create);
         Assert.assertNotNull(create);
         System.out.println(this.locationType);
     }
