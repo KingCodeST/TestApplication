@@ -28,8 +28,6 @@ public class LocationTypeServiceImplTest {
 
     LocationType locationType= LocationTypeFactory.builderDriver("Campus","CPUT");
 
-
-
     @Test
     public void getLocationTypeService() {
     }
