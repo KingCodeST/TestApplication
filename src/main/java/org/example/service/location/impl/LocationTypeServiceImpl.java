@@ -12,10 +12,12 @@ import java.util.List;
 @Service
 public class LocationTypeServiceImpl implements LocationTypeService {
 
-    private static LocationTypeService locationTypeService= null;
+
 
     @Autowired
     private LocationTypeRepository locationTypeRepository;
+    private static LocationTypeService locationTypeService= null;
+
 
     private LocationTypeServiceImpl()
     {
