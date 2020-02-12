@@ -20,9 +20,10 @@ import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.JVM)
 public class LocationTypeServiceImplTest {
 
-    private static LocationTypeService service;
+
 
     @Autowired
+    private  LocationTypeService service;
     private LocationTypeRepository repository;
 
     LocationType locationType= LocationTypeFactory.builderDriver("Campus","CPUT");
