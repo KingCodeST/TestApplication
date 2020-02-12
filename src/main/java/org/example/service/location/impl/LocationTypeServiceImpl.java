@@ -4,6 +4,7 @@ import org.example.domain.location.Location;
 import org.example.domain.location.LocationType;
 import org.example.repository.location.LocationTypeRepository;
 import org.example.service.location.LocationTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +12,12 @@ import java.util.List;
 @Service
 public class LocationTypeServiceImpl implements LocationTypeService {
 
-    private static LocationTypeService locationTypeService= null;
+
+
+    @Autowired
     private LocationTypeRepository locationTypeRepository;
+    private static LocationTypeService locationTypeService= null;
+
 
     private LocationTypeServiceImpl()
     {
