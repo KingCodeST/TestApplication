@@ -97,7 +97,7 @@ public class User {
         }
 
 
-        private Builder setAddressId(String addressId)
+        public Builder setAddressId(String addressId)
         {
             this.addressId =addressId;
             return this;

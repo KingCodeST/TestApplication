@@ -17,12 +17,16 @@ public class UserController {
     @Autowired
     private UserService service;
 
+    User user;
+
+    User user1 = UserFactory.GenericBuilder(user.getFname(),user.getFname(),user.getCellNumber(),user.getAddressId(),user.getContactId(),user.getLocationId());
+
+
     @PostMapping("/create")
     @ResponseBody
     public User create( User user)
     {
         System.out.println("we are here");
-        User user1 = UserFactory.GenericBuilder(user.getFname(),user.getLname(),user.getCellNumber(),user.getContactId(),user.getLocationId());
         return service.create(user1);
     }
 

@@ -5,12 +5,13 @@ import org.example.util.GenerateID;
 
 public class UserFactory {
 
-    public static User GenericBuilder(String fname,String lname,String cellNo,String cantactId,String locationId)
+    public static User GenericBuilder(String fname,String lname,String address,String cellNo,String cantactId,String locationId)
     {
         return new User.Builder()
                         .setStudentNo(GenerateID.generateId())
                         .setFname(fname)
                         .setLname(lname)
+                        .setAddressId(address)
                         .setCellNumber(cellNo)
                         .setContactId(cantactId)
                         .setLocationId(locationId)
