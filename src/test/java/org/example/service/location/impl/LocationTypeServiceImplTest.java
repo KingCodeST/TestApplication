@@ -26,7 +26,7 @@ public class LocationTypeServiceImplTest {
     private  LocationTypeService service;
     private LocationTypeRepository repository;
 
-    LocationType locationType= LocationTypeFactory.builderDriver("Bellville","CPUT");
+    LocationType locationType= LocationTypeFactory.builderDriver("Wellington","CPUT");
 
     @Test
     public void getLocationTypeService() {

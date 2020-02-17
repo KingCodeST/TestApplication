@@ -1,6 +1,7 @@
 package org.example.controller.user;
 
 import org.example.domain.user.User;
+import org.example.factory.user.UserFactory;
 import org.example.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
@@ -18,9 +19,11 @@ public class UserController {
 
     @PostMapping("/create")
     @ResponseBody
-    public User create(User user)
+    public User create( User user)
     {
-        return service.create(user);
+        System.out.println("we are here");
+        User user1 = UserFactory.GenericBuilder(user.getFname(),user.getLname(),user.getCellNumber(),user.getContactId(),user.getLocationId());
+        return service.create(user1);
     }
 
     @PostMapping("/update")
