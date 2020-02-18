@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class IndexController {
 
-//        @RequestMapping(value ={"/","/testapplication"})
-//        public ResponseEntity<String> home()
-//        {
-//            return new ResponseEntity<>("Welcome to Test Application!", HttpStatus.OK);
-//        }
+        @RequestMapping(value ={"/","/testapplication"})
+        public ResponseEntity<String> home()
+        {
+            return new ResponseEntity<>("Welcome to Test Application!", HttpStatus.OK);
+        }
 
 
     private static HttpServletRequest request;
