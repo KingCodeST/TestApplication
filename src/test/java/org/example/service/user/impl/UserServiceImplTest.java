@@ -25,7 +25,9 @@ public class UserServiceImplTest {
     @Autowired
     private UserRepository repository;
 
-    static User user= UserFactory.GenericBuilder("215038142","siphokuhle","tyasi","078452378","45");
+   static User user1;
+
+    static User user= UserFactory.GenericBuilder(user1.getStudentNo(),"215038142","siphokuhle","tyasi","078452378","45");
 
 
 

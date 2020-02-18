@@ -48,12 +48,12 @@ public class UserControllerTest {
 //    assertEquals(HttpStatus.OK,result.getStatusCode());
 
 
-        User user= UserFactory.GenericBuilder("215048243","cj","Goat","0794521278","#3251TG");
-        System.out.print(user+"/");
-        ResponseEntity<User>  postResponse =restTemplate.postForEntity(BASE_URL +"/create",user,User.class);
-        System.out.println(postResponse);
-        assertNotNull(postResponse);
-        assertNotNull(postResponse.getBody());
+//        User user= UserFactory.GenericBuilder("215048243","cj","Goat","0794521278","#3251TG");
+//        System.out.print(user+"/");
+//        ResponseEntity<User>  postResponse =restTemplate.postForEntity(BASE_URL +"/create",user,User.class);
+//        System.out.println(postResponse);
+//        assertNotNull(postResponse);
+//        assertNotNull(postResponse.getBody());
     }
 
     @Ignore
