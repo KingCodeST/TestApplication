@@ -27,7 +27,7 @@ public class UserController {
     public User create( User user)
     {
         System.out.println("we are here");
-        return service.create(user1);
+        return service.create(user1,user);
     }
 
     @PostMapping("/update")

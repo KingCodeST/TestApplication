@@ -9,10 +9,10 @@ public class LocationTypeFactory {
     public static LocationType builderDriver( String name, String parentLocationType){
 
         return new LocationType.Builder()
-                .setLocationTypeId(GenerateID.generateId())
-                .setName(name)
-                .setParentLocationTypeId(parentLocationType)
-                .build();
+                                .setLocationTypeId(GenerateID.generateId())
+                                .setName(name)
+                                .setParentLocationTypeId(parentLocationType)
+                                .build();
 
 
     }
