@@ -4,6 +4,7 @@ import org.example.domain.location.Location;
 import org.example.factory.location.LocationFactory;
 import org.example.service.location.impl.LocationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 @Controller
-@RequestMapping("/testapplication/location")
+@RequestMapping("/location")
 public class LocationController {
 
     @Autowired
@@ -19,11 +20,11 @@ public class LocationController {
 
 
 
-    @PostMapping("/create/")
-    public @ResponseBody
-    Location create(@PathVariable String LocationName,String latitude,String longitude,String locationTypeId ){
-        Location location= LocationFactory.builderDriver(LocationName,latitude,longitude,locationTypeId);
-        return service.create(location);
+    @PostMapping("/create")
+    public RequestEntity<?> create(@RequestBody Location location)
+    {
+        long id =service.create(location);
+        return RequestEntity.ok().body("Location created id"+id);
     }
 
     @GetMapping("/read/all")
