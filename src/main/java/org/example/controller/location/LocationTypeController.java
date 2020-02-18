@@ -2,6 +2,7 @@ package org.example.controller.location;
 
 import org.example.domain.location.LocationType;
 import org.example.domain.user.User;
+import org.example.factory.location.LocationTypeFactory;
 import org.example.service.location.LocationTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,11 +17,17 @@ public class LocationTypeController {
     @Autowired
     private LocationTypeService service;
 
+
+    LocationType locationType;
+
+    LocationType locationType1= LocationTypeFactory.builderDriver(locationType.getName(),locationType.getParentLocationtypeId());
+
     @PostMapping("/create")
     @ResponseBody
     public LocationType create(LocationType locationType)
     {
-        return service.create(locationType);
+        return service.create(locationType1);
+
     }
 
     @PostMapping("/update")

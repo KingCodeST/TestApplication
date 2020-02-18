@@ -17,7 +17,9 @@ public class LocationController {
     @Autowired
     private LocationServiceImpl service;
 
-    @GetMapping("/create/{LocationName,latitude,longitude,locationTypeId}")
+
+
+    @GetMapping("/create/")
     public @ResponseBody
     Location create(@PathVariable String LocationName,String latitude,String longitude,String locationTypeId ){
         Location location= LocationFactory.builderDriver(LocationName,latitude,longitude,locationTypeId);

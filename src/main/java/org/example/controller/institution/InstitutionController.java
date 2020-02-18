@@ -20,6 +20,10 @@ public class InstitutionController {
     @Autowired
     InstitutionServiceImpl institutionService;
 
+    Institution institution;
+
+    Institution institution1=InstitutionFactory.GenericBuilder(institution.getInstitutionName(),institution.getParentInstitutionId(),institution.getInstitutionTypeId());
+
     @PostMapping(value ="/create/{institution}", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity createInstitution(@PathVariable String institutions,String institutionType,String parentInstitution){
         System.out.println("Enter Value: "+institutions);
@@ -35,7 +39,7 @@ public class InstitutionController {
         {
             System.out.println("institution already exists");
         }else{
-            saveInstitution = InstitutionFactory.GenericBuilder(institutions,institutionType,parentInstitution);
+            saveInstitution = InstitutionFactory.GenericBuilder(institution.getInstitutionId(),institutionType,parentInstitution);
             saveInstitution =institutionService.create(saveInstitution);
         }
 
