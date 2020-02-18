@@ -19,7 +19,7 @@ public class LocationController {
 
 
 
-    @GetMapping("/create/")
+    @@PostMapping("/create/")
     public @ResponseBody
     Location create(@PathVariable String LocationName,String latitude,String longitude,String locationTypeId ){
         Location location= LocationFactory.builderDriver(LocationName,latitude,longitude,locationTypeId);
