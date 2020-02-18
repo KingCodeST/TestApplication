@@ -11,18 +11,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/testapplication/driver")
+@RequestMapping("/driver")
 public class DriverController {
 
     @Autowired
     private DriverService service;
 
-    Driver driver;
-    Driver driver1 = DriverFactory.builderDriver(driver.getAmt(),driver.getAge(),driver.getFname(),driver.getLname());
+
 
     @PostMapping("/create")
     @ResponseBody
     public Driver create(Driver driver){
+
+        Driver driver1 = DriverFactory.builderDriver(driver.getAmt(),driver.getAge(),driver.getFname(),driver.getLname());
         return service.create(driver1);
     }
 
