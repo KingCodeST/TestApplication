@@ -18,8 +18,11 @@ public class UserController {
     private UserService service;
 
     User user;
+    UserFactory userFactory;
 
-    User user1 = UserFactory.GenericBuilder(user.getFname(),user.getFname(),user.getCellNumber(),user.getAddressId(),user.getContactId(),user.getLocationId());
+    String fname, lname, addres, cellNo, contactId,locationId;
+
+    User user1 = UserFactory.GenericBuilder(user.getStudentNo(),fname,lname,addres,cellNo,contactId);
 
 
     @PostMapping("/create")
@@ -27,7 +30,7 @@ public class UserController {
     public User create( User user)
     {
         System.out.println("we are here");
-        return service.create(user1,user);
+        return service.create(user1);
     }
 
     @PostMapping("/update")
