@@ -19,7 +19,7 @@ public class DriverControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private String baseURL ="http://localhost:8080/testapplication/driver";
+    private String baseURL ="http://localhost:8080/driver";
 
     @Test
     public void create() {
