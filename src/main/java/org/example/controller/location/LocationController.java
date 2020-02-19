@@ -5,6 +5,7 @@ import org.example.factory.location.LocationFactory;
 import org.example.service.location.impl.LocationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,10 +22,10 @@ public class LocationController {
 
 
     @PostMapping("/create")
-    public RequestEntity<?> create(@RequestBody Location location)
+    public ResponseEntity<?> create(@RequestBody Location location)
     {
-        long id =service.create(location);
-        return RequestEntity.ok().body("Location created id"+id);
+        Location id =service.create(location);
+        return ResponseEntity.ok().body("Location created id"+id);
     }
 
     @GetMapping("/read/all")

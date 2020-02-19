@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/user")
 public class UserController {
 
@@ -20,15 +20,15 @@ public class UserController {
     User user;
     UserFactory userFactory;
 
-    String fname, lname, addres, cellNo, contactId,locationId;
-
-    User user1 = UserFactory.GenericBuilder(user.getStudentNo(),fname,lname,addres,cellNo,contactId);
 
 
     @PostMapping("/create")
     @ResponseBody
     public User create( User user)
     {
+
+        User user1 = UserFactory.GenericBuilder(user.getStudentNo(),user.getFname(),user.getLname(),user.getAddressId(),user.getContactId(),user.getLocationId());
+
         System.out.println("we are here");
         return service.create(user1);
     }

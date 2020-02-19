@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/testapplication/institution")
+@RequestMapping("/institution")
 public class InstitutionController {
 
     @Autowired
@@ -22,7 +22,6 @@ public class InstitutionController {
 
     Institution institution;
 
-    Institution institution1=InstitutionFactory.GenericBuilder(institution.getInstitutionName(),institution.getParentInstitutionId(),institution.getInstitutionTypeId());
 
     @PostMapping(value ="/create/{institution}", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity createInstitution(@PathVariable String institutions,String institutionType,String parentInstitution){

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class IndexController {
 
-    private static HttpServletRequest request;
+
 
         @RequestMapping(value ={"/","/testapplication"})
         public ResponseEntity<String> home()
@@ -24,20 +24,20 @@ public class IndexController {
         }
 
 
+    private static HttpServletRequest request;
 
 
-
-    String value=null;
-    @Autowired
-    DriverController controller;
-
-    @Autowired
-    InstitutionController institutionController;
-    @Autowired
-    LocationController  locationController;
-    @Autowired
-    LocationTypeController locationTypeController;
-
+//    String value=null;
+//    @Autowired
+//    DriverController controller;
+//
+//    @Autowired
+//    InstitutionController institutionController;
+//    @Autowired
+//    LocationController  locationController;
+//    @Autowired
+//    LocationTypeController locationTypeController;
+//
 
 
 

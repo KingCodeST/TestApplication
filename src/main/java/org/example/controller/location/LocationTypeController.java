@@ -18,14 +18,12 @@ public class LocationTypeController {
     private LocationTypeService service;
 
 
-    LocationType locationType;
-
-    LocationType locationType1= LocationTypeFactory.builderDriver(locationType.getName(),locationType.getParentLocationtypeId());
-
     @PostMapping("/create")
     @ResponseBody
     public LocationType create(LocationType locationType)
     {
+
+        LocationType locationType1= LocationTypeFactory.builderDriver(locationType.getName(),locationType.getParentLocationtypeId());
         return service.create(locationType1);
 
     }
