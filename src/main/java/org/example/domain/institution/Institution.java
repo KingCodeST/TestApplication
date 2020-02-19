@@ -36,6 +36,22 @@ public class Institution {
         return parentInstitutionId;
     }
 
+    public void setInstitutionId(String institutionId) {
+        this.institutionId = institutionId;
+    }
+
+    public void setInstitutionName(String institutionName) {
+        this.institutionName = institutionName;
+    }
+
+    public void setInstitutionTypeId(String institutionTypeId) {
+        this.institutionTypeId = institutionTypeId;
+    }
+
+    public void setParentInstitutionId(String parentInstitutionId) {
+        this.parentInstitutionId = parentInstitutionId;
+    }
+
     @Override
     public String toString() {
         return "Institution{" +

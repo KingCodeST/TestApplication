@@ -43,6 +43,26 @@ public class Driver {
         return lname;
     }
 
+    public void setDriverId(String driverId) {
+        this.driverId = driverId;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setAmt(double amt) {
+        this.amt = amt;
+    }
+
     public static class Builder{
         private String driverId;
         private int age;

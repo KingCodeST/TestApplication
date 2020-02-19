@@ -57,6 +57,34 @@ public class User {
         return locationId;
     }
 
+    public void setStudentNo(String studentNo) {
+        this.studentNo = studentNo;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
+    }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
+    }
+
+    public void setCellNumber(String cellNumber) {
+        this.cellNumber = cellNumber;
+    }
+
+    public void setLocationId(String locationId) {
+        this.locationId = locationId;
+    }
+
     @Override
     public String toString() {
         return "User{" +

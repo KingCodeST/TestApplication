@@ -43,7 +43,25 @@ public class Location {
         return latitude;
     }
 
+    public void setLocationId(String locationId) {
+        this.locationId = locationId;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLocationType(String locationType) {
+        this.locationType = locationType;
+    }
+
+    public void setLongitute(String longitute) {
+        this.longitute = longitute;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
 
     public static class Builder{
         private String locationId;
